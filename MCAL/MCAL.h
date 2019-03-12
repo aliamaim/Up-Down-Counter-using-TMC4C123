@@ -34,7 +34,7 @@ enum Dio_LevelType{STD_LOW, STD_HIGH};
  * 3. Set mode to digital
  * Example: Port_Init(PORTA)
  */
-void Port_Init(uint8 port_index);
+void Port_Init(uint8_t port_index);
 
 
 /*
@@ -81,7 +81,7 @@ void Port_SetPinPullDown(uint8_t port_index, uint8_t pins_mask, uint8_t enable);
  * 1 --> PIN0 is 1, PIN1 is 0
  * 3 --> PIN0 & PIN1 are 1
  */
-uint8 DIO_ReadPort(uint8_t port_index, uint8_t pins_mask);
+uint8_t DIO_ReadPort(uint8_t port_index, uint8_t pins_mask);
 
 
 /*
