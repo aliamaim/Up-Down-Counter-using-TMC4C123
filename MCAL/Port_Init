@@ -1,8 +1,7 @@
-#include "std_types.h"
 #include "tm4c123gh6pm.h"
 #include "MCAL.h"
 
-void Port_Init(uint8 port_index){
+void Port_Init(uint8_t port_index){
 	switch(port_index){
 	case PORTA:	{volatile unsigned long delay;
 				SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R0;  //enable clock
