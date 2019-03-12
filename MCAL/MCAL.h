@@ -1,7 +1,8 @@
 #ifndef MCAL_HEADER
 #define MCAL_HEADER
 
-#include "std_types.h"
+#include <stdint.h>
+
 
 
 /* PORT INDEXES */
@@ -43,7 +44,7 @@ void Port_Init(uint8 port_index);
  * Note that 0xA is equivalent to 0b1010 & 0xC to 0b1100
  * this example would set pin number 2, 3, 5, 7 to output pins
  */
-void Port_SetPinDirection(uint8 port_index, uint8 pins_mask, Port_PinDirectionType pins_direction);
+void Port_SetPinDirection(uint8_t port_index, uint8_t pins_mask, enum Port_PinDirectionType pins_direction);
 
 
 /*
@@ -54,7 +55,7 @@ void Port_SetPinDirection(uint8 port_index, uint8 pins_mask, Port_PinDirectionTy
  * Example: Port_SetPinPullUp(PORTB, 0x00000003, ENABLE);
  * this example would make pin number 0, 1 connected to the internal pull-up resistor
  */
-void Port_SetPinPullUp(uint8 port_index, uint8 pins_mask, uint8 enable);
+void Port_SetPinPullUp(uint8_t port_index, uint8_t pins_mask, uint8_t enable);
 
 
 /*
@@ -65,7 +66,7 @@ void Port_SetPinPullUp(uint8 port_index, uint8 pins_mask, uint8 enable);
  * Example: Port_SetPinPullDown(PORTB, 0x00000003, ENABLE);
  * this example would make pin number 0, 1 connected to the internal pull-down resistor
  */
-void Port_SetPinPullDown(uint8 port_index, uint8 pins_mask, uint8 enable);
+void Port_SetPinPullDown(uint8_t port_index, uint8_t pins_mask, uint8_t enable);
 
 
 /* DIO DRIVER */
@@ -80,7 +81,7 @@ void Port_SetPinPullDown(uint8 port_index, uint8 pins_mask, uint8 enable);
  * 1 --> PIN0 is 1, PIN1 is 0
  * 3 --> PIN0 & PIN1 are 1
  */
-uint8 DIO_ReadPort(uint8 port_index, uint8 pins_mask);
+uint8 DIO_ReadPort(uint8_t port_index, uint8_t pins_mask);
 
 
 /*
@@ -89,12 +90,12 @@ uint8 DIO_ReadPort(uint8 port_index, uint8 pins_mask);
  * Example: DIO_WritePort(PORTE, 0x00000005, STD_HIGH);
  * this example would set pin0 & pin2 to HIGH
  */
-void DIO_WritePort(uint8 port_index, uint8 pins_mask, Dio_LevelType pins_level);
+void DIO_WritePort(uint8_t port_index, uint8_t pins_mask, enum Dio_LevelType pins_level);
 
 /*
  * Toggle the values of the pins selected by pins_masks in the
  * port selected by port_index
  */
-void DIO_FlipPort(uint8 port_index, uint8 pins_mask);
+void DIO_FlipPort(uint8_t port_index, uint8_t pins_mask);
 
 #endif
