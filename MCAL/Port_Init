@@ -1,14 +1,6 @@
 #include "std_types.h"
 #include "tm4c123gh6pm.h"
-
-/* Port Indexes */
-
-#define PORTA (0u)
-#define PORTB (1u)
-#define PORTC (2u)
-#define PORTD (3u)
-#define PORTE (4u)
-#define PORTF (5u)
+#include lel MCAL.h
 
 void Port_Init(uint8 port_index){
 	switch(port_index){
