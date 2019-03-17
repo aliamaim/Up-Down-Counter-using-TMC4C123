@@ -1,0 +1,5 @@
+void LCD_Clear ()
+{
+
+	LCD_Command(CLEAR);
+}
