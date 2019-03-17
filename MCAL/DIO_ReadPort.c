@@ -5,7 +5,8 @@
 uint8 DIO_ReadPort( uint8 port_index , uint8 pins_mask )
 {
    uint8 pins_level;
-   switch(port_index){
+   switch(port_index)
+   {
 
 	case PORTA:
 	{
@@ -39,6 +40,7 @@ uint8 DIO_ReadPort( uint8 port_index , uint8 pins_mask )
                  pins_level=(GPIO_PORTF_DATA_R & pins_mask);
                  break;
 	}
+   }
   return pins_level;
 }                 
                  
