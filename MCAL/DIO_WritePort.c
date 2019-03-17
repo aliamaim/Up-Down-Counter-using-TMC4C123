@@ -20,7 +20,7 @@ void DIO_WritePort(uint8 port_index , uint8 pins_mask , Dio_LevelType pins_level
                                                         break;
 					       
 			     }
-		                               break;
+		             break;
 		      }
 	               case PORTB:
 		   {
