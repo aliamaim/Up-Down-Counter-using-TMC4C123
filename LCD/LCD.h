@@ -19,9 +19,9 @@
 
 /* Assuming the CTRL pins will be at pin0, pin1, pin2 */
 #define CTRL_MASK 0x07 //Can be used to do actions on RS, RW, E at the same time
-#define RS 0x01 //Pin0
-#define RW 0x02 //Pin1
-#define E  0x04 //Pin2
+#define RS_MASK 0x01 //Pin0
+#define RW_MASK 0x02 //Pin1
+#define E_MASK  0x04 //Pin2
 
 /* LCD Defined commands */
 
