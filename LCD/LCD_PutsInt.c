@@ -1,3 +1,6 @@
+#include "MCAL.h"
+#include <stdint.h>
+
 void LCD_PutsInt(int32_t num){
 	char buffer[8];
 	itoa(num,buffer,10);
