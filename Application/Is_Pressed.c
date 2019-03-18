@@ -1,7 +1,5 @@
-#include "MCAL.h"
-#include <stdint.h>
-#include "LCD.h"
-#include "tm4c123gh6pm.h"
+#include<stdint.h>
+#include "app.h"
 
 uint8 Is_Pressed(uint8 port_index,uint8 pin){
 	
