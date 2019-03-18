@@ -1,5 +1,6 @@
 #include "tm4c123gh6pm.h"
 #include "MCAL.h"
+#include <stdint.h>
 
 void Port_Init(uint8_t port_index){
 	switch(port_index){
