@@ -2,6 +2,8 @@
 #include <stdint.h>
 #include "LCD.h"
 
+/*this function adjust the cursor at the selected row and col. */
+
 
 void LCD_GoToRowCol(uint8_t row, uint8_t col)
 {
