@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include "LCD.h"
 #include "tm4c123gh6pm.h"
+#include  "delay.h"
 
 void Systick_wait(uint32_t delay){
 	
