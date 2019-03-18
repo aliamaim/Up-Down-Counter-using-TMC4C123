@@ -1,13 +1,13 @@
-#include "std_types.h"
-#include "tm4c123gh6pm.h"
+#include <stdint.h>
+#include "tm4c123gh6pm_custom.h"
 #include "MCAL.h"
 
-void DIO_WritePort(uint8 port_index , uint8 pins_mask , Dio_LevelType pins_level)
+void DIO_WritePort(uint8_t port_index , uint8_t pins_mask , enum Dio_LevelType pins_level)
 {
    switch(port_index){
 	               case PORTA:
 		    {
-                             switch(pins_level):
+                             switch(pins_level)
 			    {
                                                case STD_LOW:
 				               
@@ -24,7 +24,7 @@ void DIO_WritePort(uint8 port_index , uint8 pins_mask , Dio_LevelType pins_level
 		      }
 	               case PORTB:
 		   {
-                             switch(pins_level):
+                             switch(pins_level)
 			   {
                                                case STD_LOW:
 				              
@@ -42,7 +42,7 @@ void DIO_WritePort(uint8 port_index , uint8 pins_mask , Dio_LevelType pins_level
 		   }     
 	               case PORTC:
 		   {
-                             switch(pins_level):
+                             switch(pins_level)
 			   {
                                                case STD_LOW:
 				              
@@ -59,7 +59,7 @@ void DIO_WritePort(uint8 port_index , uint8 pins_mask , Dio_LevelType pins_level
 		   }
 	               case PORTD:
 		   {
-                             switch(pins_level):
+                             switch(pins_level)
 			   {
                                                case STD_LOW:
 				               
@@ -77,7 +77,7 @@ void DIO_WritePort(uint8 port_index , uint8 pins_mask , Dio_LevelType pins_level
                                  
 	               case PORTE:
 		   {
-                             switch(pins_level):
+                             switch(pins_level)
 			   {
                                                case STD_LOW:
 				     
@@ -96,7 +96,7 @@ void DIO_WritePort(uint8 port_index , uint8 pins_mask , Dio_LevelType pins_level
 	
 	               case PORTF:
 		   {
-                             switch(pins_level):
+                             switch(pins_level)
 			   {
                                                case STD_LOW:
 		   
@@ -112,3 +112,4 @@ void DIO_WritePort(uint8 port_index , uint8 pins_mask , Dio_LevelType pins_level
 		   }
 
 }                 
+}
