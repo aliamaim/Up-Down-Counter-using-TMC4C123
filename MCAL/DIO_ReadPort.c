@@ -1,10 +1,10 @@
-#include "std_types.h"
-#include "tm4c123gh6pm.h"
+#include "tm4c123gh6pm_custom.h"
 #include "MCAL.h"
+#include <stdint.h>
 
-uint8 DIO_ReadPort( uint8 port_index , uint8 pins_mask )
+uint8_t DIO_ReadPort( uint8_t port_index , uint8_t pins_mask )
 {
-   uint8 pins_level;
+   uint8_t pins_level;
    switch(port_index)
    {
 
