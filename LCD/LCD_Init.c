@@ -1,3 +1,8 @@
+#include "MCAL.h"
+#include <stdint.h>
+#include "LCD.h"
+#include "tm4c123gh6pm.h"
+
 void LCD_Init()
 {
     Port_Init(LCD_CTRL_PORT); //initialize PORTB itself in order to assign the AFSEL and Clock and other relative registers
