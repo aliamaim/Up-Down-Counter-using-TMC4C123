@@ -15,8 +15,8 @@
  * Data lines will be connected to PORTA (D0 --> D7 incase of 8-bit mode)
  * 										 (D4 --> D7 incase of 4-bit mode)
 */
-#define LCD_CTRL_PORT PORTB
-#define LCD_DATA_PORT PORTA
+#define LCD_CTRL_PORT GPIO_PORTB_DATA_R
+#define LCD_DATA_PORT GPIO_PORTA_DATA_R
 
 #define DATA_8BIT_MASK 0xFF //To select all data pins in 8-bit mode
 #define DATA_4BIT_MASK 0xF0 //To select all data pins in 4-bit mode
