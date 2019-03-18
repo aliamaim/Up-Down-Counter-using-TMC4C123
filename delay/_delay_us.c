@@ -1,7 +1,7 @@
 #include "MCAL.h"
 #include <stdint.h>
 #include "LCD.h"
-#include  "delay.h"
+#include "delay.h"
 
 void _delay_us(uint32_t delay){
 	
