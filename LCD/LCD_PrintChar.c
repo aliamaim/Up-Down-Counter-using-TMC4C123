@@ -1,6 +1,7 @@
 #include "MCAL.h"
 #include <stdint.h>
 #include "LCD.h"
+#include "delay.h"
 //print the input characterto the current cursor location 
 void LCD_PrintChar(const char c){
 
