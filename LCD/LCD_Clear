@@ -1,5 +1,6 @@
+#include "LCD.h"
 void LCD_Clear ()
 {
 
-	LCD_Command(CLEAR);
+	LCD_Command(LCD_Clear_Display);
 }
