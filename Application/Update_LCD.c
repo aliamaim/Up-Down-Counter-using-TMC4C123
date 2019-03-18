@@ -1,4 +1,6 @@
 #include "LCD.h"
+#include <stdint.h>
+
 extern uint32_t counter_g
 void Update_LCD()
 {
