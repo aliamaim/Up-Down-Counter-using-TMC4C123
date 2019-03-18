@@ -1,5 +1,8 @@
 #include "app.h"
-#include "tm4c123gh6pm.h"
+#include<stdint.h>
+#include "MCAL.h"
+#include "delay.h"
+extern uint32_t counter_g;
 
 uint8 Is_Pressed(uint8 port_index,uint8 pin){
 	
