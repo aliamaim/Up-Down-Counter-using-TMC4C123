@@ -1,8 +1,8 @@
 #include <stdint.h>
-#include "tm4c123gh6pm_custom.h"
-#include "MCAL.h"
-#include "LCD.h"
-#include "app.h"
+#include "MCAL/tm4c123gh6pm_custom.h"
+#include "MCAL/MCAL.h"
+#include "LCD/LCD.h"
+#include "Application/app.h"
 
 
 #define BUTTONS_PORT PORTD    //Buttons will be connected to PORTD
