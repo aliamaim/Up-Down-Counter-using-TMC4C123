@@ -18,6 +18,9 @@
 #define LCD_CTRL_PORT PORTB
 #define LCD_DATA_PORT PORTA
 
+#define DATA_8BIT_MASK 0xFF //To select all data pins in 8-bit mode
+#define DATA_4BIT_MASK 0xF0 //To select all data pins in 4-bit mode
+
 /* Assuming the CTRL pins will be at pin0, pin1, pin2 */
 #define CTRL_MASK 0x07 //Can be used to do actions on RS, RW, E at the same time
 #define RS_MASK 0x01 //Pin0
