@@ -12,7 +12,7 @@ void LCD_Init()
           Port_SetPinDirection(LCD_DATA_PORT , DATA_4BIT_MASK , PORT_PIN_OUT); //let 4 bits only output
           LCD_Command(LCD_4bit_2line_Mode);
     #endif
-          LCD_Command(LCD_Clear_Display); //give 0 to command to give clear command
+          LCD_Command(LCD_Clear_Display); //give 1 to command to give clear command
           LCD_Command(LCD_Display_On_Cursor_Blink);//let cursor blink 
  }
     
