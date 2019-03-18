@@ -61,6 +61,6 @@ void LCD_Puts(const char* str);
 void LCD_GoToRowCol(uint8_t row, uint8_t col);
 
 
-void LCD_PutsInt(sint32_t data);
+void LCD_PutsInt(int32_t data);
 
 #endif //LCD_HEADER
