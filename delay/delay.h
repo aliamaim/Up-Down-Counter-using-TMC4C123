@@ -2,7 +2,7 @@
 #define DELAY_HEADER
 
 #include <stdint.h>
-include "tm4c123gh6pm_custom.h"
+include "tm4c123gh6pm.h"
 
 /*
 * Halt the program for X microseconds specified by "delay"
