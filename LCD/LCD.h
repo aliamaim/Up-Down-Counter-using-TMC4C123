@@ -1,10 +1,11 @@
 #ifndef LCD_HEADER
 #define LCD_HEADER
 
-#include <util/delay.h>
+
 #include <stdint.h>
 
 #include "MCAL/tm4c123gh6pm.h"
+#include "delay/delay.h"
 #include "MCAL/MCAL.h"
 
 //#define LCD_8BIT_MODE //To switch to 4-bit mode comment this define, to switch to 8-bit mode un-comment this define.
