@@ -7,16 +7,16 @@ void LCD_PrintChar(const char c){
 
 
 	//select the data register 
-	DIO_WritePort(LCD_CTRL_PORT, RS_MASK, (enum Dio_LevelType) STD_HIGH);
+	DIO_WritePort(LCD_CTRL_PORT, RS_MASK, (enum Dio_LevelType)STD_HIGH);
 
 	/*write operation */
-	DIO_WritePort(LCD_CTRL_PORT, RW_MASK, (enum Dio_LevelType) STD_LOW);
+	DIO_WritePort(LCD_CTRL_PORT, RW_MASK, (enum Dio_LevelType)STD_LOW);
 
      
 	_delay_us(1); 
 
 	//Send the enable pulse
-	DIO_WritePort(LCD_CTRL_PORT, E_MASK, (enum Dio_levelType) STD_HIGH);
+	DIO_WritePort(LCD_CTRL_PORT, E_MASK, (enum Dio_LevelType)STD_HIGH);
     
     
 	_delay_us(1); 
@@ -27,7 +27,7 @@ void LCD_PrintChar(const char c){
 	
 	_delay_us(1);
 
-	DIO_WritePort(LCD_CTRL_PORT,E_MASK,(enum Dio_levelType) STD_LOW);
+	DIO_WritePort(LCD_CTRL_PORT,E_MASK,(enum Dio_LevelType)STD_LOW);
 
     _delay_us(1);
     
@@ -37,20 +37,20 @@ void LCD_PrintChar(const char c){
     LCD_DATA_PORT =( (c & 0xF0) | (LCD_DATA_PORT & 0x0F) );
     _delay_us(1);
 
-    DIO_WritePort(LCD_CTRL_PORT,E_MASK,(enum Dio_levelType) STD_LOW);
+    DIO_WritePort(LCD_CTRL_PORT,E_MASK, (enum Dio_LevelType)STD_LOW);
 
     _delay_us(1);
 
     //second send the Least sig 4 bit 
-    DIO_WritePort(LCD_CTRL_PORT,E_MASK, (enum Dio_levelType) STD_HIGH);
+    DIO_WritePort(LCD_CTRL_PORT, E_MASK, (enum Dio_LevelType)STD_HIGH);
 
     _delay_us(1);
     
-    LCD_DATA_PORT = ( ( (c & 0x0F) << 4) | (LCD_DATA_PORT & 0x0F) );
+    LCD_DATA_PORT = (((c & 0x0F) << 4) | (LCD_DATA_PORT & 0x0F));
 
     _delay_us(1);
 
-    DIO_WritePort(LCD_CTRL_PORT,E_MASK, (enum Dio_levelType) STD_LOW)
+    DIO_WritePort(LCD_CTRL_PORT, E_MASK, (enum Dio_LevelType)STD_LOW);
 
     _delay_us(1);
 
