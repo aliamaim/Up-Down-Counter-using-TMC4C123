@@ -1,8 +1,8 @@
-#include "std_types.h"
-#include "tm4c123gh6pm.h"
+#include <stdint.h>
+#include "tm4c123gh6pm_custom.h"
 #include "MCAL.h"
 
-void Port_SetPinPullDown(uint8 port_index, uint8 pins_mask, uint8 enable ){
+void Port_SetPinPullDown(uint8_t port_index, uint8_t pins_mask, uint8_t enable ){
 	
 	if(enable==1){
 		
