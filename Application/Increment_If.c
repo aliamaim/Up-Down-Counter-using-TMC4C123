@@ -1,17 +1,16 @@
 #include <stdint.h>
 #include "delay.h"
 #include "app.h"
-
-extern uint32_t counter_g;    //global varibal (3adad)
+//update:: 7-segments insted of LCD
+extern uint8_t counter1_g;   //1st 7-segments 
+extern uint8_t counter2_g;   //2nd 7-segments 
+extern uint8_t counter3_g;   //3rd 7-segments 
 
 void Increment_If(uint8_t port_index ,uint8_t pin)   
 {
-	uint8_t mask = 0;
-	mask |= (pin << 1);
+	//uint8_t mask = 0;
 	
-	while(Is_Pressed(port_index , mask))  //tool manta dayes 3ala button
-	{
-		 counter_g++;  //zawed el raqam elly hayzhar 3ala shasha
-		_delay_ms(200); //e3mel delay 0.2s bet. kol increment
-	}
+	//mask |= (pin << 1);
+	
+	
 }
